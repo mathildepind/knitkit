@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { theme } from './theme';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text style={styles.title}>KNITKIT</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -12,9 +13,14 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
+    backgroundColor: theme.colorWhite,
+    flex: 1,
     justifyContent: 'center',
+  },
+  title: {
+    color: theme.colorCerulean,
+    fontSize: 50,
+    fontWeight: 'bold',
   },
 });
